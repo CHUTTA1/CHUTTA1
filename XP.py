@@ -1,4 +1,3 @@
-# ENJOY OPEN SOURCE SCRIPT
 #▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭[ FULL SCRIPT ]▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭#
 # OWNER BY SCRIPT : MR CHUTTA
 # MAKE BY : FARDIN AHMED ASHRAFUL
@@ -186,7 +185,7 @@ except:
     sys.exit()
 xvx = open('.prox.txt', 'r').read().splitlines()
 #▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭[ LINEX ]▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭#
-sys.stdout.write('\x1b]2;<💚MR.CHUTTA💚>\x07')
+sys.stdout.write('\x1b]2;<❤MR.CHUTTA❤>\x07')
 def clear():os.system('clear');print(logo)
 def linex():print(f'{R}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━')
 #▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭[ FILE UA ]▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭#
@@ -222,7 +221,7 @@ logo=f"""\x1b[38;5;46m ▗▖  ▗▖▗▄▄▖      ▗▄▄▖▗▖ ▗▖
 {A}[{R}●{A}] {G}FACEBOOK   {R} >>   {A}MR CHUTTA
 {A}[{R}●{A}] {G}STATUS      {R}>>   {A}FILE {R}X{A} RANDOM
 {A}[{R}●{A}] {G}VERSION   {R}  >>   {A}0.1
-{A}[{R}●{A}] {G}GITHUB    {R}  >>   {A}https://github.com/CHUTTA
+{A}[{R}●{A}] {G}TOOL    {R}  >>   {A}PERSONAL
 {R}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"""
 #▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭[ MENU ]▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭#
 def menu():
@@ -382,7 +381,7 @@ def api1(ids,names,passlist):
     except Exception as e:
         pass
 #▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭[ FILE METHOD M2 ]▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭#
-def api4(ids,names,passlist):
+def api2(ids,names,passlist):
 	try:
 		global ok,loop,sim_id
 		sys.stdout.write('\r\r\033[1;37m [CHUTTA-M2] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
