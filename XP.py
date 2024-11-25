@@ -387,7 +387,7 @@ def api1(ids,names,passlist):
 'X-Fb-Connection-Quality': 'EXCELLENT',
 'Authorization': 'OAuth null',
 'X-Fb-Connection-Bandwidth': '24807555',
-'X-Fb-Connection-Type': 'unknown',
+'X-Fb-Connection-Type': 'MOBILE.LTE',
 'X-Fb-Device-Group': '6060',
 'X-Tigon-Is-Retry': 'False',
 'X-Fb-Friendly-Name': 'authenticate',
