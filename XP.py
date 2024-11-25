@@ -202,7 +202,7 @@ logo=f"""\x1b[38;5;46m ▗▖  ▗▖▗▄▄▖      ▗▄▄▖▗▖ ▗▖
 {R}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 {A}[{R}●{A}] {G}FACEBOOK   {R} >>   {A}MR CHUTTA
 {A}[{R}●{A}] {G}STATUS      {R}>>   {A}FILE {R}x{A}ONLY
-{A}[{R}●{A}] {G}VERSION   {R}  >>   {A}1.0
+{A}[{R}●{A}] {G}VERSION   {R}  >>   {A}1.1
 {A}[{R}●{A}] {G}TOOL      {R}  >>   {A}PERSONAL
 {R}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"""
 #▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭[ MENU ]▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭#
@@ -221,13 +221,13 @@ def menu():
                                         time.sleep(1)
                                         menu()
                                 clear()
-                                print(f'{A}[{R}1{A}]{G} METHOD M1\n{A}[{R}2{A}]{G} METHOD M2\n{A}[{R}3{A}]{G} METHOD M3\n');linex()
+                                print(f'{A}[{R}1{A}]{G} METHOD M1\n{A}[{R}2{A}]{G} METHOD M2\n{A}[{R}3{A}]{G} METHOD M3');linex()
                                 mthd=input(f'{A}[{R}●{A}] {G}INPUT {R}>>{A} ')
                                 clear()
                                 plist = []           
-                                print(f'{A}[{R}1{A}]{G} 0 PASSWORD AUTO PASS X\n{A}[{R}2{A}]{G} CHOICE PASSWORD CLONE');linex()
+                                print(f'{A}[{R}1{A}]{G} CHOICE PASSWORD CLONE');linex()
                                 ppp=input(f'{A}[{R}●{A}] {G}INPUT {R}>>{A} ')
-                                if ppp in ['1','01']:
+                                if ppp in ['0','00']:
                                         plist.append('first last')
                                         plist.append('first123')
                                         plist.append('first1234')
@@ -272,7 +272,7 @@ def menu():
                                 linex()
                                 input(f'{A}[{R}●{A}] {G}PRESS ENTER TO BACK ')
                                 menu()
-                        elif CHUTTA in ['2','02']:
+                        elif CHUTTA in ['','0']:
                                 ___RANDOM___()
                         elif CHUTTA in ['3','03']:
                                 print("Next up")
